@@ -101,7 +101,7 @@ export default function ProjectCard({
 
         <p className="text-xs text-justify text-slate-500">{description}</p>
 
-        <div className="flex gap-2 border-t-[1px] border-t-slate-800 pt-2">
+        <div className="flex gap-2 border-t-[1px] border-t-slate-800 pt-2 flex-wrap">
           {badges?.map((badge) => (
             <Badge name={badge} key={badge} />
           ))}
@@ -113,7 +113,7 @@ export default function ProjectCard({
 
 function Badge({ name }: { name: string }) {
   return (
-    <div className="flex items-center justify-center p-1 bg-slate-500 text-white w-fit text-[10px] lg:text-xs rounded-lg">
+    <div className="flex items-center justify-center p-1 bg-slate-500 text-white w-fit text-[10px] lg:text-xs rounded-lg whitespace-nowrap">
       {name}
     </div>
   );

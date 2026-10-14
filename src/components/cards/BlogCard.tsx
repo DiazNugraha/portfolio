@@ -105,7 +105,7 @@ export default function BlogCard({
 
         <div className="flex flex-col lg:flex-row gap-2 items-start lg:items-center">
           <span className="font-medium text-xs lg:text-sm">Topic:</span>
-          <div className="flex gap-2 pt-2">
+          <div className="flex gap-2 pt-2 flex-wrap">
             {badges?.map((badge) => (
               <Badge name={badge} key={badge} />
             ))}
@@ -118,7 +118,7 @@ export default function BlogCard({
 
 function Badge({ name }: { name: string }) {
   return (
-    <div className="flex items-center justify-center p-1 bg-slate-500 text-white w-fit text-[10px] lg:text-xs rounded-lg">
+    <div className="flex items-center justify-center p-1 bg-slate-500 text-white w-fit text-[10px] lg:text-xs rounded-lg whitespace-nowrap">
       {name}
     </div>
   );
