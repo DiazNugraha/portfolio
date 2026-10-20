@@ -27,8 +27,8 @@ export default function MainLayout({
   }, []);
 
   return (
-    <div className="w-full h-full flex justify-center relative">
-      <div className="lg:w-[30%] h-full">
+    <div className="relative flex h-full w-full justify-center">
+      <div className="h-full w-full min-w-0 px-4 lg:w-[30%] lg:px-0">
         <div
           className={cn(
             "flex px-5 py-36 text-white flex-col items-center gap-y-20",
