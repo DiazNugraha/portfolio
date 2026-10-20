@@ -22,8 +22,10 @@ export default function MarkdownContent({ fileKey }: IMarkdownContentProps) {
   if (!Article) return null;
 
   return (
-    <div className="prose prose-invert max-w-none">
-      <Article />
+    <div className="w-full min-w-0 max-w-full">
+      <div className="prose prose-invert max-w-none">
+        <Article />
+      </div>
     </div>
   );
 }
