@@ -23,9 +23,11 @@ export default function ProjectSection() {
     <MotionSection className="flex flex-col gap-2">
       <h1 className="text-lg lg:text-xl font-semibold">Selected Projects</h1>
       <div className="flex flex-col gap-3">
-        {projectCollections.slice(0, 3).map((project, index) => (
-          <ProjectCard {...project} key={index} />
-        ))}
+        {projectCollections
+          .filter((project) => project.showOnHome)
+          .map((project, index) => (
+            <ProjectCard {...project} key={index} />
+          ))}
         <MotionLink
           variants={hoverVariants}
           initial="rest"
